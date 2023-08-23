@@ -1,4 +1,14 @@
-//PWM
+///////////////////////////////
+// PWM 互补信号发生模块
+// 作者： Felix Qi
+// 输入：
+// protection：  当protection为1时，pwmA和pwmB输出同时拉低
+// duty:         占空比
+// 输出：
+// pwmA pwmB： 输出PWM信号
+// 其他配置，比如init_direction、deadtime、phase、half_period之类的通过parameter进行配置
+///////////////////////////////
+
 module pwm_bridge(
   output reg pwmA,
   output reg pwmB,
