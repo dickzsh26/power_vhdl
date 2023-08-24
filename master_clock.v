@@ -15,11 +15,11 @@ module master_clock(output reg clk,output reg rst_n);
     integer first;
 
     initial begin
-	// Start the clock output to be logic 0 at t=0
-	clk = 0;
-	first = 1;
-	rst_n = 1;
-//	$simplis_vpi_probe( clk );
+		// Start the clock output to be logic 0 at t=0
+		clk = 0;
+		first = 1;
+		rst_n = 1;
+	//	$simplis_vpi_probe( clk );
     end
 
     always begin
