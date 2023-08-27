@@ -19,8 +19,18 @@ reg [2:0] state,state_next;
 
 wire counter_ton = (counter == ton_time);
 reg set_dly;
-wire set_pos = (~set_dly) & set;
+reg set_pos;
+always @(*)
+begin
+    set_pos = (~set_dly) & set;
+end
 
+initial
+begin
+    $simplis_vpi_probe( set );
+    $simplis_vpi_probe( set_dly );
+    $simplis_vpi_probe( set_pos );
+end
 always @(posedge clk or negedge rst_n)
 begin
     if(!rst_n)
