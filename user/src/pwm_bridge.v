@@ -51,6 +51,9 @@ begin
             if(counter>=duty+deadtime) pwmB<=protection?1'b0:1'b1;//B
             else pwmB<=1'b0;//B
         end
+        begin
+            if(duty)
+        end
 
     end
 end
