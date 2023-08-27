@@ -30,9 +30,14 @@ always @(posedge sys_clk) begin
 end
 
 //Instance 
-hello u_hello(
-	.clk   	( clk    ),
-	.rst_n 	( rst_n  )
+// outports wire
+wire   	reset_pwm;
+
+ton u_ton(
+	.clk       	( clk        ),
+	.rst_n     	( rst_n      ),
+	.set       	( set        ),
+	.reset_pwm 	( reset_pwm  )
 );
 
 
@@ -44,4 +49,5 @@ initial begin
 end
 
 endmodule  //TOP
+
 

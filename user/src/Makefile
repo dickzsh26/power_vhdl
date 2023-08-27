@@ -4,8 +4,8 @@
 # @file
 # @version 0.1
 
-TARGET = test_counter
-SRC_FILES = test_counter.v
+TARGET = test
+SRC_FILES = ../sim/testbench.v
 OBJ = $(TARGET).vvp
 all: comp run wave
 vcd: comp run
