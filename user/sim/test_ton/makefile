@@ -5,7 +5,7 @@
 # @version 0.1
 
 TARGET = wave
-SRC_FILES = ../sim/testbench.v
+SRC_FILES = testbench.v
 OBJ = $(TARGET).vvp
 all: comp run wave
 vcd: comp run
