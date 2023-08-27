@@ -33,6 +33,7 @@ ton u_ton(
 	.clk       	( clk        ),
 	.rst_n     	( rst_n      ),
 	.set       	( set        ),
+    .ton_time   ( 21'd400    ),
 	.reset_pwm 	( reset_pwm  )
 );
 

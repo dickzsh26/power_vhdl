@@ -1,13 +1,16 @@
+/*
+ton模块，set信号来了之后，等待ton时间
+*/
 module ton(
     input clk,
     input rst_n,
     input set,
+    input [counter_width-1:0] ton_time,
     output reg reset_pwm
 );
 
-parameter ton_time = 40;
-parameter conuter_width = 21;
-reg [conuter_width-1:0] counter;
+parameter counter_width = 21;
+reg [counter_width-1:0] counter;
 
 localparam IDLE = 3'd0;
 localparam UP =   3'd1;
