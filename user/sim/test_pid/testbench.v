@@ -20,14 +20,24 @@ end
 wire [25:0] 	pi_out;
 wire [25:0] 	target = 26'd300;
 reg [11:0]		sample = 26'd290;
-reg adc_complete = 0;
-
+reg adc_complete_tmp = 0;
+reg adc_complete;
 always begin
-	#10 	adc_complete = 0;
-	#100 	adc_complete = 1;
-	#10 	adc_complete = 0;
-	#100	adc_complete = 1;
+	#10 	adc_complete_tmp = 0;
+	#100 	adc_complete_tmp = 1;
+	#10 	adc_complete_tmp = 0;
+	#100	adc_complete_tmp = 1;
 end
+
+always @(posedge clk or negedge rst_n)begin
+	if(~rst_n)begin
+		adc_complete <= 0;
+	end
+	begin
+		adc_complete <= adc_complete_tmp;
+	end
+end
+
 PID #(
 	.kp(26'd100),
 	.ki(26'd100),
