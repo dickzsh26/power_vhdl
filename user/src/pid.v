@@ -19,7 +19,6 @@ parameter signed[PARAMETER_BIT_WIDTH-1:0]  minimum_out = 0;
 parameter signed[PARAMETER_BIT_WIDTH-1:0]  maximum_add = 100;
 parameter signed[PARAMETER_BIT_WIDTH-1:0]  minimum_add = 0;
 
-
 wire signed [PARAMETER_BIT_WIDTH-1:0] sample_signed = sample;
 
 reg signed[PARAMETER_BIT_WIDTH-1:0]pi_add;
@@ -34,8 +33,6 @@ reg signed [PARAMETER_BIT_WIDTH-1:0] ki_comp;
 reg signed [PARAMETER_BIT_WIDTH-1:0] kp_comp_error;
 
 reg[4:0] pi_state;
-
-reg[PERIOD_BIT_WIDTH-1:0] adc_read_cnt = 0;
 
 // 同步信号
 reg adc_complete_dly1;
