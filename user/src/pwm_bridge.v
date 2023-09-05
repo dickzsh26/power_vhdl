@@ -14,14 +14,14 @@ module pwm_bridge(
     output reg pwmB,
     input clk,rst_n,
     input protection,
-    input [bit_width-1:0]duty
+    input [BIT_WIDTH-1:0]duty
 ); 
 
-reg[bit_width-1:0] counter;//actually 11�
+reg[BIT_WIDTH-1:0] counter;//actually 11�
 reg counter_direction;//
 
 parameter init_direction = 0;
-parameter bit_width = 21;
+parameter BIT_WIDTH = 21;
 parameter phase = 200;
 parameter half_period = 200;
 parameter deadtime = 10;

@@ -9,9 +9,9 @@
 ////////////////////////////
 module ramp(clk,rst_n,out);
     input wire clk,rst_n;
-    output reg[bit_width-1:0] out;
+    output reg[BIT_WIDTH-1:0] out;
 
-    parameter bit_width = 10;
+    parameter BIT_WIDTH = 10;
     
     always @(posedge clk or negedge rst_n)
     begin
