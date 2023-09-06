@@ -4,7 +4,7 @@ module reference(
 );
 
 parameter BIT_WIDTH = 21;
-parameter [BIT_WIDTH-1:0] OUTPUT_VALUE = 0;
+parameter OUTPUT_VALUE = 0;
 
 always@(posedge clk or negedge rst_n)
 begin
